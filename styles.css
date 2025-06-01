@@ -1,0 +1,363 @@
+/* Base styles */
+:root {
+    --primary-color: #4755f0;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --gray-color: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+/* Header */
+header {
+    background-color: rgb(175, 172, 172);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    height: 40px;
+    border-radius: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Yellow\ Black\ Brush\ Streetwear\ Brand\ Logo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 3rem;
+}
+
+.service-row.reversed {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-description {
+    flex: 1;
+}
+
+.service-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.service-description p {
+    margin-bottom: 1rem;
+}
+
+/* About Us Section */
+.about {
+    padding: 5rem 0;
+    background-color: rgb(198, 192, 192);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-facts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.fact {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.fact i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+.footer-logo p,
+.footer-info p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.footer-info i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-bottom {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-bottom p {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    .service-row,
+    .service-row.reversed,
+    .about-content {
+        flex-direction: column;
+    }
+
+    .service-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Simple mobile menu toggle - you'd need JS to make this work */
+    .mobile-toggle {
+        display: block;
+    }
+}
