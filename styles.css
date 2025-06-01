@@ -132,13 +132,37 @@ nav ul li a:hover {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-family: 'Righteous', cursive;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 3px 3px 0px var(--primary-color),
+        6px 6px 0px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Services Section */
